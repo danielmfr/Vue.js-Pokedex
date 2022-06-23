@@ -1,24 +1,3 @@
-# pokedex
+# Pokédex - Vue.js
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Criação de uma Pokédex simples, utilizando Vue.js e Bulma. É utilizado uma API, chamada PokéAPI, para exibir os sprites dos Pokémons, recuperar seus ID's e tipos.
