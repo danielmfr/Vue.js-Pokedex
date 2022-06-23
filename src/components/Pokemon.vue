@@ -46,16 +46,12 @@ export default {
   name: "CompPokemon",
   created() {
     axios.get(this.url).then((res) => {
-      //console.log(res.data);
       if (res.data.types.length == 2) {
         this.pokemon.type1 = res.data.types[0].type.name;
         this.pokemon.type2 = res.data.types[1].type.name;
       } else {
         this.pokemon.type1 = res.data.types[0].type.name;
       }
-      /*axios.get(res.data.types[0].type.url).then((res) => {
-              console.log(res.data);
-            });*/
       this.pokemon.id = res.data.id;
       this.pokemon.front = res.data.sprites.front_default;
       this.pokemon.back = res.data.sprites.back_default;

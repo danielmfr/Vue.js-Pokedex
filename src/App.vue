@@ -42,7 +42,6 @@ export default {
   },
   created() {
     axios
-      //.get("https://pokeapi.co/api/v2/pokemon?limit=905&offset=0")
       .get("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
       .then((res) => {
         this.pokemons = res.data.results;
@@ -55,21 +54,11 @@ export default {
       if (this.busca == "" || this.busca == " ") {
         this.filteredPokemons = this.pokemons;
       } else {
-        this.filteredPokemons = this.pokemons.filter(
-          //(pokemon) => pokemon.name == this.busca
-          (pokemon) => pokemon.name.includes(this.busca)
+        this.filteredPokemons = this.pokemons.filter((pokemon) =>
+          pokemon.name.includes(this.busca)
         );
       }
     },
-  },
-  computed: {
-    /*resultadoBusca: function () {
-      if (this.busca == "" || this.busca == " ") {
-        return this.pokemons;
-      } else {
-        return this.pokemons.filter((pokemon) => pokemon.name == this.busca);
-      }
-    },*/
   },
   components: {
     Pokemon,
@@ -92,7 +81,7 @@ body {
   overflow: hidden;
   background-image: linear-gradient(
     to top left,
-    rgba(100, 100, 100, 1),
+    rgb(66, 66, 66),
     rgba(162, 0, 0, 1)
   );
 }
